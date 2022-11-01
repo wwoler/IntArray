@@ -50,11 +50,13 @@ IntArray& IntArray::operator=(IntArray const& other)
 	if (this == &other)
 		return *this;
 
-	erase();
+	if (_length != other._length)
+	{
+		erase();
 
-
-	_length = other._length;
-	_arr = new int[_length];
+		_length = other._length;
+		_arr = new int[_length];
+	}
 
 	for (int i{ 0 }; i < _length; ++i)
 		_arr[i] = other[i];
