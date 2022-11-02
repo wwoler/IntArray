@@ -48,6 +48,7 @@ auto main() -> int
 	{
 		IntArray* ia = new IntArray();
 		test(*ia);
+		delete ia;
 	}
 	catch (std::exception const& ex)
 	{
@@ -58,6 +59,5 @@ auto main() -> int
 		std::cerr << "Unknown error\a\n!";
 	}
 	
-
 	return EXIT_SUCCESS;
 }
