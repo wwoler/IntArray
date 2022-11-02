@@ -117,7 +117,7 @@ auto IntArray::resize(int32_t newLength) -> void
 }
 
 
-auto IntArray::insert(int32_t index, int val) -> void
+auto IntArray::insert(int32_t index, int32_t val) -> void
 {
 	if (index < 0 || index > _length)
 		throw bad_range();

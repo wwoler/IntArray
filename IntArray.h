@@ -40,24 +40,24 @@ public:
 	IntArray(IntArray const&& other) = delete;
 	IntArray& operator=(IntArray const&& other) = delete;
 
-	auto operator[](int32_t index)       -> int&;
-	auto operator[](int32_t index) const -> int const&;
+	auto operator[](int32_t index)           -> int&;
+	auto operator[](int32_t index) const     -> int const&;
 
 private:
 	int32_t    _length{};
 	int*       _arr{};
 	
-	auto erase()                         -> void;
-	auto realloc(int32_t newLength)      -> void;
+	auto erase()                             -> void;
+	auto realloc(int32_t newLength)          -> void;
 
 public:	
-	auto resize(int32_t newLength)       -> void;
-	auto insert(int32_t index, int val)  -> void;
-	auto push_back(int32_t value)        -> void;
-	auto push_front(int32_t value)       -> void;
-	auto remove(int32_t index)           -> void;
-	auto clear()                         -> void;
-	auto size() const                    -> int32_t;
+	auto resize(int32_t newLength)           -> void;
+	auto insert(int32_t index, int32_t val)  -> void;
+	auto push_back(int32_t value)            -> void;
+	auto push_front(int32_t value)           -> void;
+	auto remove(int32_t index)               -> void;
+	auto clear()                             -> void;
+	auto size() const                        -> int32_t;
 
 };
 
