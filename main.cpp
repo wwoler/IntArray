@@ -44,11 +44,11 @@ auto test(IntArray& arr) -> void
 
 auto main() -> int
 {
+	IntArray* ia = nullptr;
 	try
 	{
-		IntArray* ia = new IntArray();
+		ia = new IntArray();
 		test(*ia);
-		delete ia;
 	}
 	catch (std::exception const& ex)
 	{
@@ -59,5 +59,7 @@ auto main() -> int
 		std::cerr << "Unknown error\a\n!";
 	}
 	
+	delete ia;
+
 	return EXIT_SUCCESS;
 }
