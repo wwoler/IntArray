@@ -51,11 +51,11 @@ auto main() -> int
 	}
 	catch (std::exception const& ex)
 	{
-		std::cout << ex.what();
+		std::cerr << ex.what();
 	}
 	catch (...)
 	{
-		std::cout << "Unknown error\a\n!";
+		std::cerr << "Unknown error\a\n!";
 	}
 	
 
