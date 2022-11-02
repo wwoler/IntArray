@@ -105,6 +105,9 @@ auto IntArray::resize(int32_t newLength) -> void
 	if (newLength < 0)
 		throw bad_length();
 
+	if (_length == newLength)
+		return;
+
 	int count_to_copy{ (newLength > _length) ? _length : newLength };
 	IntArray temp = *this;
 	erase();
